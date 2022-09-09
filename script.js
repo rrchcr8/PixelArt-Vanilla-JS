@@ -10,3 +10,23 @@ let paintBtn = document.getElementById("paint-btn");
 let widthValue = document.getElementById("wid cxth-value");
 let heightValue = document.getElementById("height-value");
 
+//Event objects
+
+let events = {
+    mouse: {
+        down:"mousedown",
+        move: "mousemove",
+        up: "mouseup",
+    },
+    touch: {
+        down: "touchstart",
+        move: "touchmove",
+        up: "touchend",
+    },    
+}
+
+let deviceType = "";
+
+//Initially draw and erase would be false
+let draw = false;
+let erase = false;
