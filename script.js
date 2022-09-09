@@ -30,3 +30,18 @@ let deviceType = "";
 //Initially draw and erase would be false
 let draw = false;
 let erase = false;
+
+//Function to detect touch device
+const isTouchDevice = () => {
+    try {
+        document.createEvent("TouchEvent");
+        deviceType = "touch";
+        return true;
+    }
+    catch(e) {
+        deviceType = "mouse";
+        return false;
+    }
+};
+
+//console.log(isTouchDevice());
